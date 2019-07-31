@@ -1,0 +1,14 @@
+.Hello {
+    height: auto;
+    width: 80%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    left: 10%;
+    top: 0;
+    padding: 20% 0;
+    background-color: white;
+    justify-content: space-between;
+}
