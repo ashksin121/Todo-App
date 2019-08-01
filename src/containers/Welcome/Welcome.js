@@ -43,15 +43,25 @@ class Welcome extends Component {
 
         let message = null;
         let node = this.state.node;
-        if (node==1) {
+        if (node===1) {
             message = <p>Make your own Todo list just by clicking on "NEW" button</p>
-        } else if (node==2) {
+        } else if (node===2) {
             message = <p>Keep a track of all the work done, and upon finishing a work change the status of work to "COMPLETED"</p>
-        } else if (node==3) {
+        } else if (node===3) {
             message = <p>Manage your Todos, delete the unwanted ones to keep your dashboard clean</p>
         } else {
             message = null;
         }
+
+        let hello = (
+            <Aux>
+                <div className="Hello">
+                    <Card clicked={this.clicked1}><h1>Make Todo</h1></Card>
+                    <Card clicked={this.clicked2}><h1>Complete the Task</h1></Card>
+                    <Card clicked={this.clicked3}><h1>Manage your Todos</h1></Card>
+                </div>
+            </Aux>
+        )
 
         return(
             <Aux>
@@ -59,11 +69,7 @@ class Welcome extends Component {
                     modalClosed={this.cancel}>
                     {message}
                 </Modal>
-                <div className="Hello">
-                    <Card clicked={this.clicked1}><h1>Make Todo</h1></Card>
-                    <Card clicked={this.clicked2}><h1>Complete the Task</h1></Card>
-                    <Card clicked={this.clicked3}><h1>Manage your Todos</h1></Card>
-                </div>
+                {hello}
             </Aux>
         )
     }
