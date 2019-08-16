@@ -1,0 +1,9 @@
+.ListItem {
+    font-family: "Courier New", Courier, monospace;
+    opacity: 0.7;
+    color: black;
+}
+
+.Clicked {
+    text-decoration: line-through;
+}
